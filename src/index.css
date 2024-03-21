@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-font: "Poppins", sans-serif;
+  --secondary-font: "Merriweather", serif;
+  --main-font-color: #161544;
+  --secondary-font-color: rgba(22, 21, 68, 0.6);
+  --secondary-font-color: rgba(22, 21, 68, 0.6);
+  --font-size-sm: 1.6rem;
+  --font-size-md: 1.8rem;
+  --font-size-xl: 2.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--main-font-color);
+  font-size: var(--font-size-md);
+  font-family: var(--main-font);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fafaff;
+}
+
+.component-wrapper {
+  position: relative;
+  max-width: 585px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.notification {
+  background-color: #161544;
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.notification-dropdown {
+  max-width: 585px;
+
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 4.6rem;
+  box-shadow: 0 14px 64px 0 rgba(137, 137, 185, 0.28);
+
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.notification-dropdown.toggle {
+  display: block;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+
+  position: relative;
+}
+
+.top::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #a2a1b4;
+  bottom: -35px;
+}
+
+.top h1 {
+  font-size: var(--font-size-xl);
+  font-family: var(--secondary-font);
+  font-weight: 900;
+}
+
+.top p {
+  font-size: var(--font-size-sm);
+  color: #4b5ade;
+  padding: 1rem;
+  background-color: #f2f4ff;
+  border-radius: 30px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  padding-block: 4rem;
+  position: relative;
+}
+
+.card:nth-child(3) {
+  margin-top: 4rem;
+  padding-bottom: 0;
+}
+
+.card:nth-child(2):before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #a2a1b4;
+  bottom: -35px;
+}
+
+.card img {
+  align-self: first baseline;
+}
+
+.active {
+  color: rgba(22, 21, 68, 0.6);
+  margin-top: 2px;
+
+  padding-block: 1rem;
+}
+
+.card-btn {
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 2.1rem;
+}
+
+.card-btn button {
+  padding: 2.4rem;
+  border-radius: 12px;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.card-btn .decline-btn {
+  border: 1px solid rgba(22, 21, 68, 0.4);
+  color: #161544;
+}
+
+.card-btn .accept-btn {
+  background-color: #161544;
+  color: #fff;
+}
+
+.description {
+  padding: 1rem 0;
+}
+
+
+@media screen and (max-width: 630px) {
+  body{
+    padding: 1rem;
+  }
+
+  .notification-dropdown{
+    padding: 2rem;
+
+  }
+
+  .card{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-btn {
+    flex-direction: column;
+    
+  }
+}
